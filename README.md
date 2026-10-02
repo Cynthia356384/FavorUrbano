@@ -1,73 +1,225 @@
-# React + TypeScript + Vite
+# 🚚 FavorUrbano
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Plataforma web para la gestión de favores, pedidos y servicios de entrega en Tizimín, Yucatán.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 Descripción del proyecto
 
-## React Compiler
+**FavorUrbano** es una plataforma web diseñada para facilitar la solicitud y gestión de servicios como envíos, compras, diligencias y favores personalizados.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+El proyecto contempla diferentes tipos de usuarios, cada uno con una interfaz adaptada a sus necesidades:
 
-## Expanding the ESLint configuration
+- 👤 Cliente
+- 🛵 Repartidor
+- 🛡️ Administrador
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+La plataforma busca centralizar la gestión de pedidos y servicios, facilitando la comunicación, el seguimiento y la organización de las actividades.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🎯 Objetivo
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Desarrollar una plataforma web que permita gestionar diferentes tipos de servicios y entregas de manera organizada, proporcionando interfaces específicas para clientes, repartidores y administradores.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Entre los objetivos del proyecto se encuentran:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- 📦 Gestionar pedidos y servicios.
+- 👤 Facilitar a los clientes la solicitud de servicios.
+- 🛵 Facilitar la gestión de entregas para los repartidores.
+- 🛡️ Proporcionar herramientas de administración.
+- 💬 Facilitar la comunicación entre los usuarios.
+- 📍 Mostrar información relacionada con ubicaciones y entregas.
+- 📊 Presentar información organizada mediante dashboards.
+- 🎨 Crear una interfaz clara y fácil de utilizar.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+## 💡 Problema que busca resolver
+
+La solicitud y gestión de favores, compras, envíos y diligencias puede requerir comunicación constante y coordinación entre diferentes personas.
+
+**FavorUrbano** propone centralizar estos procesos mediante una plataforma web que permita organizar:
+
+- Solicitudes de servicios.
+- Pedidos.
+- Entregas.
+- Información de clientes.
+- Información de repartidores.
+- Estados de los pedidos.
+- Comunicación entre usuarios.
+
+---
+
+# ✨ Funcionalidades principales
+
+## 👤 Cliente
+
+El sistema contempla un panel para clientes desde el cual pueden consultar y gestionar diferentes servicios.
+
+Entre las funcionalidades se encuentran:
+
+- 📦 Crear nuevos pedidos.
+- 🛒 Solicitar compras y entregas.
+- 🛵 Solicitar servicios de recogida y entrega.
+- ⚡ Solicitar diligencias.
+- 📄 Solicitar envío de documentos.
+- ✨ Crear favores personalizados.
+- 📋 Consultar pedidos realizados.
+- 🔎 Consultar el estado de los pedidos.
+- 💬 Utilizar el sistema de chat.
+- 📍 Consultar información relacionada con origen y destino.
+
+---
+
+## 🛵 Repartidor
+
+El proyecto contempla una interfaz para los repartidores encargados de gestionar los servicios asignados.
+
+Entre las funciones representadas se encuentran:
+
+- 📦 Consulta de pedidos.
+- 📍 Visualización de origen y destino.
+- 🛵 Gestión de servicios.
+- ⏱️ Consulta de tiempo estimado.
+- 📏 Consulta de distancia.
+- 💰 Consulta de ganancias.
+- 🔄 Actualización del estado de los pedidos.
+
+---
+
+## 🛡️ Administrador
+
+El sistema incluye un panel administrativo para consultar y supervisar información de la plataforma.
+
+Entre la información contemplada se encuentra:
+
+- 📦 Pedidos.
+- 👤 Clientes.
+- 🛵 Repartidores.
+- 📊 Estadísticas.
+- 💰 Información de ganancias.
+- 📈 Actividad de la plataforma.
+
+---
+
+# 📦 Tipos de servicios
+
+La plataforma contempla diferentes tipos de servicios:
+
+### 📦 Enviar paquete
+
+Servicio destinado al envío y entrega de paquetes.
+
+### 🛒 Comprar y entregar
+
+Permite solicitar la compra de productos y posteriormente su entrega.
+
+### 🛵 Recoger y entregar
+
+Servicio para recoger un artículo en una ubicación y llevarlo a otra.
+
+### ⚡ Diligencia rápida
+
+Servicio destinado a realizar una diligencia específica.
+
+### 📄 Enviar documentos
+
+Servicio para transportar documentos entre diferentes ubicaciones.
+
+### ✨ Favor personalizado
+
+Permite solicitar un servicio que no se encuentre dentro de las opciones anteriores.
+
+---
+
+# 💬 Sistema de chat
+
+El proyecto incluye una interfaz de comunicación mediante chat.
+
+El sistema contempla elementos como:
+
+- 💬 Envío de mensajes.
+- 👤 Identificación de usuarios.
+- 🕐 Horario de mensajes.
+- 🔔 Mensajes del sistema.
+- 📱 Interfaz visual para la conversación.
+
+El chat busca facilitar la comunicación relacionada con los servicios solicitados.
+
+---
+
+# 📍 Seguimiento de pedidos
+
+Los pedidos cuentan con diferentes estados que permiten representar visualmente el avance del servicio.
+
+```text
+Creado
+   ↓
+Asignado
+   ↓
+Recogiendo
+   ↓
+En ruta
+   ↓
+Entregado
+
+# 👥 Funciones del equipo
+
+## 🎨 Cynthia356384 — UX/UI y Diseño Visual
+
+- Diseño de la interfaz gráfica.
+- Diseño de la experiencia de usuario (UX).
+- Organización visual de las pantallas.
+- Diseño de dashboards.
+- Diseño de interfaces para Cliente, Repartidor y Administrador.
+- Diseño visual de pedidos y seguimiento.
+- Diseño de la interfaz de chat.
+- Selección y organización de elementos visuales.
+- Creación de una interfaz clara, organizada y fácil de utilizar.
+- Colaboración con el equipo para adaptar el diseño a las funcionalidades del sistema.
+
+---
+
+## 💻 BrayanMaldonado-coder — Desarrollo
+
+- Desarrollo de la aplicación web.
+- Implementación de funcionalidades.
+- Desarrollo de componentes.
+- Integración de las diferentes partes del sistema.
+- Organización y mantenimiento del código.
+- Implementación de las interfaces diseñadas.
+- Corrección y mejora de funcionalidades.
+
+---
+
+## 🧪 Jose-Meza1206 — Testing y Documentación
+
+- Realización de pruebas del sistema.
+- Identificación y seguimiento de errores.
+- Validación de funcionalidades.
+- Elaboración de documentación.
+- Organización de información del proyecto.
+- Apoyo en la revisión del funcionamiento de la aplicación.
+
+---
+
+## 📋 jazminfern4ndez — Área Administrativa
+
+- Organización de actividades del proyecto.
+- Seguimiento de tareas.
+- Coordinación de aspectos administrativos.
+- Seguimiento de avances.
+- Organización de requerimientos.
+- Apoyo en la coordinación del equipo.
+
+---
+
+## ✅ MichelleFirst — Control de Calidad
+
+- Revisión de la calidad del proyecto.
+- Validación de requerimientos.
+- Revisión de funcionalidades.
+- Seguimiento de posibles problemas.
+- Verificación del cumplimiento de objetivos.
+- Apoyo en las revisiones y validaciones del proyecto.
